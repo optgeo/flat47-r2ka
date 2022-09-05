@@ -20,15 +20,15 @@ FlatGeobuf files from 小地域/国勢調査/2020年/小地域（町丁・字等
 - 東京都 https://optgeo.github.io/flat47-r2ka/?13#4.6/27.91/139.52
 - 神奈川県 https://optgeo.github.io/flat47-r2ka/?14#9.18/35.4151/139.3792
 - 新潟県 https://optgeo.github.io/flat47-r2ka/?15#7.56/37.602/138.806
-- 北海道 https://optgeo.github.io/flat47-r2ka?16
-- 北海道 https://optgeo.github.io/flat47-r2ka?17
-- 北海道 https://optgeo.github.io/flat47-r2ka?18
-- 北海道 https://optgeo.github.io/flat47-r2ka?19
-- 北海道 https://optgeo.github.io/flat47-r2ka?20
-- 北海道 https://optgeo.github.io/flat47-r2ka?21
-- 北海道 https://optgeo.github.io/flat47-r2ka?22
-- 北海道 https://optgeo.github.io/flat47-r2ka?23
-- 北海道 https://optgeo.github.io/flat47-r2ka?24
+- 富山県 https://optgeo.github.io/flat47-r2ka/?16#8.89/36.637/137.193
+- 石川県 https://optgeo.github.io/flat47-r2ka/?17#7.57/36.974/136.866/0/
+- 福井県 https://optgeo.github.io/flat47-r2ka/?18#8.3/35.842/136.113
+- 山梨県 https://optgeo.github.io/flat47-r2ka/?19#8.8/35.5718/138.6291
+- 長野県 https://optgeo.github.io/flat47-r2ka/?20#7.56/36.134/138.027
+- 岐阜県 https://optgeo.github.io/flat47-r2ka/?21#8.08/35.82/137.014
+- 静岡県 https://optgeo.github.io/flat47-r2ka/?22#8.37/35.09/138.371
+- 愛知県 https://optgeo.github.io/flat47-r2ka/?23#8.77/34.9912/137.0755
+- 三重県 https://optgeo.github.io/flat47-r2ka/?24#7.91/34.485/136.354
 - 北海道 https://optgeo.github.io/flat47-r2ka?25
 - 北海道 https://optgeo.github.io/flat47-r2ka?26
 - 北海道 https://optgeo.github.io/flat47-r2ka?27
@@ -58,3 +58,6 @@ FlatGeobuf files from 小地域/国勢調査/2020年/小地域（町丁・字等
 
 # See also
 - https://flatgeobuf.org/examples/maplibre/
+
+# Related issues
+- [Zoom center not under cursor when terrain is on](https://github.com/maplibre/maplibre-gl-js/issues/1024)
