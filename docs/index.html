@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css"/>
+<script src="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/flatgeobuf@3.22.0/dist/flatgeobuf-geojson.min.js"></script>
+</head>
+<body>
+<style>
+body { margin:0; padding:0; font-family: 'Roboto', sans-serif; color: #333333}
+#map { top:0; height: 100vh; width: 100vw; position: fixed; z-index: 0; }
+</style>
+<div id="map"></div>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const map = new maplibregl.Map({
+    container: "map",
+    style: "https://optgeo.github.io/nagi-vi/style-maplibre.json",
+    hash: true, 
+    center: [135, 35],
+    zoom: 3,
+    maxZoom: 18
+  })
+  const pref = document.location.href.split("?")[1].
+    split("#")[0].padStart(2, "0")
+  const response = await fetch(`r2ka${pref}.fgb`)
+  map.on("load", async() => {
+    const fc = { type: "FeatureCollection", features: [] }
+    let i = 0
+    for await (const f of 
+      flatgeobuf.deserialize(response.body, undefined, undefined)) {
+      fc.features.push({...f, id: i})
+      i += 1
+    }
+    map.addSource("r2ka", {
+      type: "geojson",
+      data: fc,
+      attribution: "統計局"
+    })
+    map.addLayer({
+      id: "r2ka-fill",
+      type: "fill",
+      source: "r2ka",
+      paint: {
+        "fill-color": "#0000ff",
+        "fill-opacity": 0.5
+      }
+    }, "buildings4302")
+    map.addLayer({
+      id: "r2ka-line",
+      type: "line",
+      source: "r2ka",
+      paint: {
+        "line-color": "#0000ff",
+        "line-opacity": 0.9,
+        "line-width": 2
+      }
+    }, "buildings4302")
+  })
+})
+</script>
+</body>
+
