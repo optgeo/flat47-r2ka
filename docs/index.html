@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     style: "https://optgeo.github.io/optbv-charites/maplibre.json",
     hash: true, 
     center: [135, 35],
-    zoom: 3,
+    zoom: 8,
+    minZoom: 4,
     maxZoom: 18
   })
   map.addControl(new maplibregl.NavigationControl())
