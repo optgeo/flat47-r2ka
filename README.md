@@ -60,4 +60,4 @@ FlatGeobuf files from 小地域/国勢調査/2020年/小地域（町丁・字等
 - https://flatgeobuf.org/examples/maplibre/
 
 # Related issues
-- [Zoom center not under cursor when terrain is on](https://github.com/maplibre/maplibre-gl-js/issues/1024)
+- <strike>[Zoom center not under cursor when terrain is on](https://github.com/maplibre/maplibre-gl-js/issues/1024)</strike>
